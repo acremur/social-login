@@ -18,7 +18,8 @@ function App() {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
-          "Access-Control-Allow-Credentials": "true"
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Origin": process.env.REACT_APP_SERVER_URL
         }
       }).then(res => {
         if (res.status === 200) return res.json()
